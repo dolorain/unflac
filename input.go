@@ -11,8 +11,9 @@ import (
 	"strings"
 
 	"git.sr.ht/~ft/cue"
-	"github.com/axgle/mahonia"
 	"github.com/gammazero/workerpool"
+	"golang.org/x/text/encoding/simplifiedchinese"
+	"golang.org/x/text/transform"
 )
 
 type Input struct {
@@ -40,9 +41,8 @@ func NewInput(path string) (in *Input, err error) {
 	}
 	defer cueReader.Close()
 
-	decoder := mahonia.NewDecoder("gbk") // 把原来ANSI格式的文本文件里的字符，用gbk进行解码。
-
-	cueRaw, _ := ioutil.ReadAll(decoder.NewReader(cueReader))
+	cueRaw, _ := ioutil.ReadAll(cueReader)
+	cueRaw, _ = Decode(cueRaw)
 	cueRaw = bytes.TrimPrefix(cueRaw, []byte{0xef, 0xbb, 0xbf}) // remove the nasty BOM
 	var sheet *cue.Sheet
 	if sheet, err = cueSheetFromBytes(cueRaw); err != nil {
@@ -211,4 +211,14 @@ func (in *Input) Split(pool *workerpool.WorkerPool, firstErr chan<- error) (err 
 	}
 
 	return
+}
+
+func Decode(s []byte) ([]byte, error) {
+	I := bytes.NewReader(s)
+	O := transform.NewReader(I, simplifiedchinese.GBK.NewDecoder())
+	d, e := ioutil.ReadAll(O)
+	if e != nil {
+		return nil, e
+	}
+	return d, nil
 }

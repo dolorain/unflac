@@ -66,6 +66,7 @@ func main() {
 	args := flag.Args()
 	if len(args) == 0 {
 		args = []string{"."}
+		// args = []string{"/mnt/OST/赵季平、谭晶等 - 大秦帝国"}
 	}
 	var inputs []*Input
 	for _, path := range args {
