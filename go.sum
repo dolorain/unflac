@@ -1,0 +1,13 @@
+git.sr.ht/~ft/cue v0.0.0-20220829223741-08ef10fe2cae h1:RyQI98YEAL2z5F1p39+7uNeAtZ2vyiV3t0SjQdAtOX8=
+git.sr.ht/~ft/cue v0.0.0-20220829223741-08ef10fe2cae/go.mod h1:2g/SNxzfPOWPHR5dDElVgP2JosTb5O80Pmc+9vaPHoI=
+github.com/asdfsx/gochardet v0.0.0-20170222172924-16496b196583 h1:fwQwR9R/8uVzr7T6Q5kDJT8XDg8vFkyQ0OBe4jZpGLU=
+github.com/asdfsx/gochardet v0.0.0-20170222172924-16496b196583/go.mod h1:4/Kdsw0m/rhOfvIxj9ZgbK7QkJeNNQorJKpfgNPD5Lw=
+github.com/gammazero/deque v0.2.0 h1:SkieyNB4bg2/uZZLxvya0Pq6diUlwx7m2TeT7GAIWaA=
+github.com/gammazero/deque v0.2.0/go.mod h1:LFroj8x4cMYCukHJDbxFCkT+r9AndaJnFMuZDV34tuU=
+github.com/gammazero/workerpool v1.1.3 h1:WixN4xzukFoN0XSeXF6puqEqFTl2mECI9S6W44HWy9Q=
+github.com/gammazero/workerpool v1.1.3/go.mod h1:wPjyBLDbyKnUn2XwwyD3EEwo9dHutia9/fwNmSHWACc=
+github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca h1:NugYot0LIVPxTvN8n+Kvkn6TrbMyxQiuvKdEwFdR9vI=
+github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca/go.mod h1:uugorj2VCxiV1x+LzaIdVa9b4S4qGAcH6cbhh4qVxOU=
+go.uber.org/goleak v1.1.12 h1:gZAh5/EyT/HQwlpkCy6wTpqfH9H8Lz8zbm3dZh+OyzA=
+golang.org/x/text v0.3.8 h1:nAL+RVCQ9uMn3vJZbV+MRnydTJFPf8qqY42YiA6MrqY=
+golang.org/x/text v0.3.8/go.mod h1:E6s5w1FMmriuDzIBO73fBruAKo1PCIq6d2Q6DHfQ8WQ=
